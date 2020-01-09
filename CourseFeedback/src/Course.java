@@ -20,4 +20,14 @@ public class Course {
 	public int getIndex() {
 		return this.course_index;
 	}
+	public boolean equals(Object o) {
+		if (this==o){
+			return true;
+		}
+		if (o==null) {
+			return false;
+		}
+		Course other = (Course)o;
+		return ((this.course_index==other.course_index)&& this.name.equals(other.name));
+	}
 }
