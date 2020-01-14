@@ -17,6 +17,13 @@ public class Course {
 	public ArrayList<String>getTips(){
 		return this.tips;
 	}
+	public String printTips() {
+		String s="";
+		for (String t: this.tips) {
+			s+=t+"\n";
+		}
+		return s;
+	}
 	public boolean equals(Object o) {
 		if (this==o){
 			return true;
