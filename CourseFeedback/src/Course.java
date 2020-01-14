@@ -1,12 +1,12 @@
+import java.util.ArrayList;
 
 public class Course {
 
 	private String name;
-	private int course_index;
+	private ArrayList<String>tips;
 	
-	public Course(String n,int i) {
+	public Course(String n) {
 		this.name=n;
-		this.course_index=i;
 	}
 	public void setName(String s) {
 		this.name=s;
@@ -14,11 +14,8 @@ public class Course {
 	public String getName() {
 		return this.name;
 	}
-	public void setIndex(int i) {
-		this.course_index=i;
-	}
-	public int getIndex() {
-		return this.course_index;
+	public ArrayList<String>getTips(){
+		return this.tips;
 	}
 	public boolean equals(Object o) {
 		if (this==o){
@@ -28,6 +25,6 @@ public class Course {
 			return false;
 		}
 		Course other = (Course)o;
-		return ((this.course_index==other.course_index)&& this.name.equals(other.name));
+		return ((this.tips.equals(other.tips))&& this.name.equals(other.name));
 	}
 }
