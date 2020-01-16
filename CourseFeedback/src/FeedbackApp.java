@@ -5,12 +5,14 @@ import javax.swing.JTextField;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import javax.swing.JComboBox;
+import javax.swing.DefaultComboBoxModel;
+import javax.swing.JPanel;
+import java.awt.Color;
 
 public class FeedbackApp {
 
 	private JFrame frame;
-	private JTextField textField;
-	private JButton btnViewTips;
 
 	/**
 	 * Launch the application.
@@ -44,23 +46,41 @@ public class FeedbackApp {
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		
-		textField = new JTextField();
-		textField.setEditable(false);
-		textField.setBounds(0, 0, 635, 756);
-		frame.getContentPane().add(textField);
-		textField.setColumns(10);
+		JPanel panel = new JPanel();
+		panel.setBounds(17, 14, 954, 724);
+		frame.getContentPane().add(panel);
+		panel.setLayout(null);
 		
-		JButton btnNewButton = new JButton("CS250");
-		btnNewButton.addActionListener(new ActionListener() {
+		JPanel panel_1 = new JPanel();
+		panel_1.setBackground(Color.PINK);
+		panel_1.setBounds(150, 338, 368, 327);
+		panel.add(panel_1);
+		panel_1.setVisible(false);
+		
+		JPanel panel_2 = new JPanel();
+		panel_2.setBackground(Color.PINK);
+		panel_2.setBounds(549, 348, 386, 317);
+		panel.add(panel_2);
+		
+		JButton btnButton = new JButton("button1");
+		btnButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				
+				panel_1.setVisible(true);
+				panel_2.setVisible(false);
 			}
 		});
-		btnNewButton.setBounds(637, 132, 197, 69);
-		frame.getContentPane().add(btnNewButton);
+		btnButton.setBounds(220, 191, 197, 47);
+		panel.add(btnButton);
 		
-		btnViewTips = new JButton("View Tips");
-		btnViewTips.setBounds(637, 206, 197, 47);
-		frame.getContentPane().add(btnViewTips);
+		JButton btnButton_1 = new JButton("button2");
+		btnButton_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				panel_1.setVisible(false);
+				panel_2.setVisible(true);
+			}
+		});
+		btnButton_1.setBounds(610, 191, 197, 47);
+		panel.add(btnButton_1);
+		panel_2.setVisible(false);
 	}
 }
