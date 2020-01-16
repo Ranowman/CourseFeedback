@@ -16,7 +16,8 @@ public class FeedbackApp {
 
 	private JFrame frame;
 	private JTextField textField;
-
+	Course CS250=new Course("CS250");
+	
 	/**
 	 * Launch the application.
 	 */
@@ -32,12 +33,21 @@ public class FeedbackApp {
 			}
 		});
 	}
-
+	private void addTips(Course c, String s) {
+		c.addTips(s);
+	}
+	
+	private String displayTips(Course c) {
+		String s = c.printTips();
+		return s;
+	}
 	/**
 	 * Create the application.
 	 */
 	public FeedbackApp() {
 		initialize();
+		addTips(CS250,"hi");
+		addTips(CS250,"jk");
 	}
 
 	/**

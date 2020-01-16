@@ -7,6 +7,7 @@ public class Course {
 	
 	public Course(String n) {
 		this.name=n;
+		tips=new ArrayList<String>();
 	}
 	public void setName(String s) {
 		this.name=s;
@@ -23,6 +24,14 @@ public class Course {
 			s+=t+"\n";
 		}
 		return s;
+	}
+	
+	public boolean addTips(String s) {
+		if (tips.contains(s)) {
+			return false;
+		}
+		tips.add(s);
+		return true;
 	}
 	public boolean equals(Object o) {
 		if (this==o){
