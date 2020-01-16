@@ -86,6 +86,12 @@ public class FeedbackApp {
 		panel_2.setLayout(null);
 		
 		JButton btnCs_1 = new JButton("CS250");
+		btnCs_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				String s = displayTips(CS250);
+				textField.setText(s);
+			}
+		});
 		btnCs_1.setBounds(76, 85, 197, 47);
 		panel_2.add(btnCs_1);
 		panel_2.setVisible(false);
