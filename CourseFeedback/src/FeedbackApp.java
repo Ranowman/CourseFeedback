@@ -4,6 +4,7 @@ import javax.swing.JFrame;
 import javax.swing.JTextField;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 import java.awt.event.ActionEvent;
 import javax.swing.JComboBox;
 import javax.swing.DefaultComboBoxModel;
@@ -11,11 +12,11 @@ import javax.swing.JPanel;
 import java.awt.Color;
 import javax.swing.JLayeredPane;
 import java.awt.CardLayout;
+import javax.swing.JTextArea;
 
 public class FeedbackApp {
 
 	private JFrame frame;
-	private JTextField textField;
 	Course CS250=new Course("CS250");
 	
 	/**
@@ -38,7 +39,12 @@ public class FeedbackApp {
 	}
 	
 	private String displayTips(Course c) {
-		String s = c.printTips();
+		ArrayList<String> tips = c.getTips();
+	
+		String s = "";
+		for (String t: tips) {
+			s+=(t+"\n");
+		}
 		return s;
 	}
 	/**
@@ -85,11 +91,18 @@ public class FeedbackApp {
 		panel_2.setBackground(Color.ORANGE);
 		panel_2.setLayout(null);
 		
+		JTextArea textArea = new JTextArea();
+		textArea.setColumns(20);
+		textArea.setBackground(Color.WHITE);
+		textArea.setEditable(false);
+		textArea.setBounds(18, 330, 505, 343);
+		panel.add(textArea);
+		
 		JButton btnCs_1 = new JButton("CS250");
 		btnCs_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				String s = displayTips(CS250);
-				textField.setText(s);
+				textArea.setText(s);
 			}
 		});
 		btnCs_1.setBounds(76, 85, 197, 47);
@@ -118,11 +131,7 @@ public class FeedbackApp {
 		btnButton_1.setBounds(635, 260, 197, 47);
 		panel.add(btnButton_1);
 		
-		textField = new JTextField();
-		textField.setEditable(false);
-		textField.setBounds(31, 135, 479, 589);
-		panel.add(textField);
-		textField.setColumns(10);
+	
 		
 		
 		

@@ -21,7 +21,7 @@ public class Course {
 	public String printTips() {
 		String s="";
 		for (String t: this.tips) {
-			s+=("\n"+t+"\n");
+			s+=(t+"\n");
 		}
 		return s;
 	}
