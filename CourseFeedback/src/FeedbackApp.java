@@ -11,6 +11,8 @@ import javax.swing.DefaultComboBoxModel;
 import javax.swing.JPanel;
 import java.awt.Color;
 import javax.swing.JLayeredPane;
+import javax.swing.JOptionPane;
+
 import java.awt.CardLayout;
 import javax.swing.JTextArea;
 
@@ -34,8 +36,9 @@ public class FeedbackApp {
 			}
 		});
 	}
-	private void addTips(Course c, String s) {
-		c.addTips(s);
+	private boolean addTips(Course c, String s) {
+		boolean added = c.addTips(s);
+		return added;
 	}
 	
 	private String displayTips(Course c) {
@@ -82,6 +85,17 @@ public class FeedbackApp {
 		panel_1.setLayout(null);
 		
 		JButton btnCs = new JButton("CS250");
+		btnCs.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				String review = (String)JOptionPane.showInputDialog(frame,"Add your tip");
+				if (addTips(CS250,review)==true) {
+					JOptionPane.showMessageDialog(null, "tip added");
+				}
+				else {
+					JOptionPane.showMessageDialog(null, "tip already exists");
+				}
+			}
+		});
 		btnCs.setBounds(66, 71, 197, 47);
 		panel_1.add(btnCs);
 		panel_1.setVisible(false);
@@ -95,7 +109,7 @@ public class FeedbackApp {
 		textArea.setColumns(20);
 		textArea.setBackground(Color.WHITE);
 		textArea.setEditable(false);
-		textArea.setBounds(18, 330, 505, 343);
+		textArea.setBounds(18, 104, 505, 587);
 		panel.add(textArea);
 		
 		JButton btnCs_1 = new JButton("CS250");
