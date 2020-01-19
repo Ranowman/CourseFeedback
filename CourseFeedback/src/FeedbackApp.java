@@ -15,6 +15,14 @@ import javax.swing.JOptionPane;
 
 import java.awt.CardLayout;
 import javax.swing.JTextArea;
+import java.awt.GridLayout;
+import com.jgoodies.forms.layout.FormLayout;
+import com.jgoodies.forms.layout.ColumnSpec;
+import com.jgoodies.forms.layout.RowSpec;
+import java.awt.GridBagLayout;
+import java.awt.GridBagConstraints;
+import java.awt.Insets;
+import javax.swing.JLabel;
 
 public class FeedbackApp {
 
@@ -74,7 +82,7 @@ public class FeedbackApp {
 		panel.setLayout(null);
 		
 		JLayeredPane layeredPane = new JLayeredPane();
-		layeredPane.setBounds(566, 320, 357, 371);
+		layeredPane.setBounds(533, 164, 390, 254);
 		panel.add(layeredPane);
 		layeredPane.setLayout(new CardLayout(0, 0));
 		layeredPane.setVisible(false);
@@ -103,24 +111,68 @@ public class FeedbackApp {
 		JPanel panel_2 = new JPanel();
 		layeredPane.add(panel_2, "name_29131305335800");
 		panel_2.setBackground(Color.ORANGE);
-		panel_2.setLayout(null);
 		
 		JTextArea textArea = new JTextArea();
 		textArea.setColumns(20);
 		textArea.setBackground(Color.WHITE);
 		textArea.setEditable(false);
-		textArea.setBounds(18, 104, 505, 587);
+		textArea.setBounds(11, 0, 505, 587);
 		panel.add(textArea);
+		panel_2.setLayout(new GridLayout(4, 4, 0, 0));
 		
-		JButton btnCs_1 = new JButton("CS250");
-		btnCs_1.addActionListener(new ActionListener() {
+		JButton View_CS150 = new JButton("CS150");
+		panel_2.add(View_CS150);
+		
+		JButton View_CS250 = new JButton("CS250");
+		View_CS250.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				String s = displayTips(CS250);
 				textArea.setText(s);
 			}
 		});
-		btnCs_1.setBounds(76, 85, 197, 47);
-		panel_2.add(btnCs_1);
+		panel_2.add(View_CS250);
+		
+		JButton View_CS251 = new JButton("CS251");
+		panel_2.add(View_CS251);
+		
+		JButton View_CS315 = new JButton("CS315");
+		panel_2.add(View_CS315);
+		
+		JButton View_CS317 = new JButton("CS317");
+		panel_2.add(View_CS317);
+		
+		JButton View_CS337 = new JButton("CS337");
+		panel_2.add(View_CS337);
+		
+		JButton View_CS351 = new JButton("CS351");
+		panel_2.add(View_CS351);
+		
+		JButton View_CS361 = new JButton("CS361");
+		panel_2.add(View_CS361);
+		
+		JButton View_CS395 = new JButton("CS395");
+		panel_2.add(View_CS395);
+		
+		JButton View_CS417 = new JButton("CS417");
+		panel_2.add(View_CS417);
+		
+		JButton View_CS431 = new JButton("CS431");
+		panel_2.add(View_CS431);
+		
+		JButton View_CS458 = new JButton("CS458");
+		panel_2.add(View_CS458);
+		
+		JButton View_CS520 = new JButton("CS520");
+		panel_2.add(View_CS520);
+		
+		JButton View_CS535 = new JButton("CS535");
+		panel_2.add(View_CS535);
+		
+		JButton View_CS537 = new JButton("CS537");
+		panel_2.add(View_CS537);
+		
+		JButton View_CS595 = new JButton("CS595");
+		panel_2.add(View_CS595);
 		panel_2.setVisible(false);
 		
 		JButton btnButton = new JButton("Add Tips");
@@ -131,7 +183,7 @@ public class FeedbackApp {
 				panel_2.setVisible(false);
 			}
 		});
-		btnButton.setBounds(635, 190, 197, 47);
+		btnButton.setBounds(635, 16, 197, 47);
 		panel.add(btnButton);
 		
 		JButton btnButton_1 = new JButton("View Tips");
@@ -142,7 +194,7 @@ public class FeedbackApp {
 				panel_2.setVisible(true);
 			}
 		});
-		btnButton_1.setBounds(635, 260, 197, 47);
+		btnButton_1.setBounds(635, 84, 197, 47);
 		panel.add(btnButton_1);
 		
 	
