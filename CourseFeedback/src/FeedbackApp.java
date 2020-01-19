@@ -27,7 +27,22 @@ import javax.swing.JLabel;
 public class FeedbackApp {
 
 	private JFrame frame;
+	Course CS150=new Course("CS150");
 	Course CS250=new Course("CS250");
+	Course CS251=new Course("CS251");
+	Course CS315=new Course("CS315");
+	Course CS317=new Course("CS317");
+	Course CS337=new Course("CS337");
+	Course CS351=new Course("CS351");
+	Course CS361=new Course("CS361");
+	Course CS395=new Course("CS395");
+	Course CS417=new Course("CS417");
+	Course CS431=new Course("CS431");
+	Course CS458=new Course("CS458");
+	Course CS520=new Course("CS520");
+	Course CS535=new Course("CS535");
+	Course CS537=new Course("CS537");
+	Course CS595=new Course("CS595");
 	
 	/**
 	 * Launch the application.
@@ -63,8 +78,7 @@ public class FeedbackApp {
 	 */
 	public FeedbackApp() {
 		initialize();
-		addTips(CS250,"hi");
-		addTips(CS250,"jk");
+		
 	}
 
 	/**
@@ -121,6 +135,12 @@ public class FeedbackApp {
 		panel_2.setLayout(new GridLayout(4, 4, 0, 0));
 		
 		JButton View_CS150 = new JButton("CS150");
+		View_CS150.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				String s = displayTips(CS150);
+				textArea.setText(s);
+			}
+		});
 		panel_2.add(View_CS150);
 		
 		JButton View_CS250 = new JButton("CS250");
@@ -133,46 +153,131 @@ public class FeedbackApp {
 		panel_2.add(View_CS250);
 		
 		JButton View_CS251 = new JButton("CS251");
+		View_CS251.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				String s = displayTips(CS251);
+				textArea.setText(s);
+			}
+		});
 		panel_2.add(View_CS251);
 		
 		JButton View_CS315 = new JButton("CS315");
+		View_CS315.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				String s = displayTips(CS315);
+				textArea.setText(s);
+			}
+		});
 		panel_2.add(View_CS315);
 		
 		JButton View_CS317 = new JButton("CS317");
+		View_CS317.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				String s = displayTips(CS317);
+				textArea.setText(s);
+			}
+		});
 		panel_2.add(View_CS317);
 		
 		JButton View_CS337 = new JButton("CS337");
+		View_CS337.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				String s = displayTips(CS337);
+				textArea.setText(s);
+			}
+		});
 		panel_2.add(View_CS337);
 		
 		JButton View_CS351 = new JButton("CS351");
+		View_CS351.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				String s = displayTips(CS351);
+				textArea.setText(s);
+			}
+		});
 		panel_2.add(View_CS351);
 		
 		JButton View_CS361 = new JButton("CS361");
+		View_CS361.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				String s = displayTips(CS361);
+				textArea.setText(s);
+			}
+		});
 		panel_2.add(View_CS361);
 		
 		JButton View_CS395 = new JButton("CS395");
+		View_CS395.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				String s = displayTips(CS395);
+				textArea.setText(s);
+			}
+		});
 		panel_2.add(View_CS395);
 		
 		JButton View_CS417 = new JButton("CS417");
+		View_CS417.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				String s = displayTips(CS417);
+				textArea.setText(s);
+			}
+		});
 		panel_2.add(View_CS417);
 		
 		JButton View_CS431 = new JButton("CS431");
+		View_CS431.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				String s = displayTips(CS431);
+				textArea.setText(s);
+			}
+		});
 		panel_2.add(View_CS431);
 		
 		JButton View_CS458 = new JButton("CS458");
+		View_CS458.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				String s = displayTips(CS458);
+				textArea.setText(s);
+			}
+		});
 		panel_2.add(View_CS458);
 		
 		JButton View_CS520 = new JButton("CS520");
+		View_CS520.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				String s = displayTips(CS520);
+				textArea.setText(s);
+			}
+		});
 		panel_2.add(View_CS520);
 		
 		JButton View_CS535 = new JButton("CS535");
+		View_CS535.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				String s = displayTips(CS535);
+				textArea.setText(s);
+			}
+		});
 		panel_2.add(View_CS535);
 		
 		JButton View_CS537 = new JButton("CS537");
+		View_CS537.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				String s = displayTips(CS537);
+				textArea.setText(s);
+			}
+		});
 		panel_2.add(View_CS537);
 		
 		JButton View_CS595 = new JButton("CS595");
+		View_CS595.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				String s = displayTips(CS595);
+				textArea.setText(s);
+			}
+		});
 		panel_2.add(View_CS595);
+		
 		panel_2.setVisible(false);
 		
 		JButton btnButton = new JButton("Add Tips");
